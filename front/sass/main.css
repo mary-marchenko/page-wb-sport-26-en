@@ -1,0 +1,297 @@
+@font-face {
+  font-family: "SuisseIntl-Medium";
+  src: url(../fonts/SuisseIntl-Medium.woff);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "SuisseIntl-SemiBold";
+  src: url(../fonts/SuisseIntl-SemiBold.woff);
+  font-weight: 600;
+}
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+ul, li, p, h1, h2, h3 {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  overscroll-behavior: none;
+  height: 100%;
+  display: flex;
+}
+
+.banner {
+  width: 50%;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  background: #000055;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+}
+.banner__top {
+  height: 94%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 6%;
+}
+.banner__logo {
+  height: 12.5%;
+  position: relative;
+}
+.banner__img {
+  height: 82%;
+  width: auto;
+  margin: -8% 0 -11% -42px;
+}
+.banner__title, .banner__subtitle {
+  font-family: SuisseIntl-SemiBold, sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.banner__slogan {
+  height: 21%;
+}
+.banner__bottom {
+  background: #ff267e;
+  height: 6%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner__bottom-plus {
+  background: url("../img/plus-icon.svg") no-repeat 0 0/contain;
+  width: 41px;
+  height: 36px;
+  margin: 0 13px;
+}
+.banner__bottom-txt {
+  font-family: SuisseIntl-Medium, sans-serif;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.62vw;
+}
+
+@media screen and (max-width: 1920px) {
+  .banner__top {
+    height: 93%;
+  }
+  .banner__logo {
+    height: 13%;
+  }
+  .banner__img {
+    height: 84%;
+    margin: -6% 0 -15% -69px;
+  }
+  .banner__slogan {
+    height: 20%;
+  }
+  .banner__bottom {
+    height: 7%;
+  }
+  .banner__bottom-txt {
+    font-size: 1.56vw;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .banner__bottom-plus {
+    width: 31px;
+    height: 28px;
+  }
+  .banner__bottom-txt {
+    margin-top: 3px;
+  }
+}
+@media screen and (max-width: 1600px) and (max-height: 850px) {
+  .banner__img {
+    height: 88%;
+    margin-top: -7%;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .banner__top {
+    height: 94%;
+  }
+  .banner__slogan {
+    height: 19%;
+  }
+  .banner__img {
+    height: 89%;
+    margin: -11% 0 -17% -69px;
+  }
+  .banner__logo {
+    height: 14%;
+  }
+  .banner__bottom {
+    height: 6%;
+  }
+  .banner__bottom-plus {
+    width: 22px;
+    height: 19px;
+    margin: 0 10px;
+  }
+}
+@media screen and (max-width: 1440px) and (max-height: 800px) {
+  .banner__img {
+    height: 93%;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .banner__img {
+    height: 84%;
+  }
+}
+@media screen and (max-width: 1366px) and (max-height: 900px) {
+  .banner__img {
+    height: 87%;
+  }
+}
+@media screen and (max-width: 1366px) and (max-height: 800px) {
+  .banner__top {
+    padding-bottom: 5%;
+  }
+  .banner__img {
+    height: 91%;
+  }
+}
+@media screen and (max-width: 1366px) and (max-height: 700px) {
+  .banner__top {
+    height: 93%;
+  }
+  .banner__img {
+    height: 95%;
+  }
+  .banner__bottom {
+    height: 7%;
+  }
+}
+@media screen and (max-width: 1366px) and (max-height: 660px) {
+  .banner__img {
+    height: 98%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .banner__img {
+    height: 89%;
+  }
+  .banner__bottom-txt {
+    margin-top: 2px;
+  }
+}
+@media screen and (max-width: 1280px) and (max-height: 720px) {
+  .banner__img {
+    height: 89%;
+    margin-top: -9%;
+  }
+}
+@media screen and (max-width: 1280px) and (max-height: 650px) {
+  .banner__img {
+    height: 93%;
+  }
+}
+@media screen and (max-width: 1120px) and (max-height: 834px) {
+  .banner__img {
+    height: 85%;
+  }
+}
+@media screen and (max-width: 1042px) and (max-height: 834px) {
+  .banner__img {
+    height: 83%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .banner__top {
+    height: 96%;
+    padding-bottom: 26%;
+  }
+  .banner__logo {
+    height: 9%;
+  }
+  .banner__img {
+    height: 55%;
+    margin: 15% 0 13% -55px;
+  }
+  .banner__slogan {
+    height: 14%;
+  }
+  .banner__bottom {
+    height: 4%;
+  }
+}
+@media screen and (max-width: 1024px) and (max-height: 1200px) {
+  .banner__top {
+    padding-bottom: 19%;
+  }
+  .banner__logo {
+    height: 11%;
+  }
+  .banner__img {
+    height: 62%;
+    margin: 4% 0 2% -55px;
+  }
+  .banner__slogan {
+    height: 18%;
+  }
+}
+@media screen and (max-width: 1024px) and (max-height: 1000px) {
+  .banner__top {
+    height: 95%;
+    padding-bottom: 10%;
+  }
+  .banner__img {
+    height: 75%;
+    margin: -6% 0 -8% -50px;
+  }
+  .banner__bottom {
+    height: 5%;
+  }
+}
+@media screen and (max-width: 1024px) and (max-height: 700px) {
+  .banner__top {
+    height: 94%;
+    padding-bottom: 7%;
+  }
+  .banner__img {
+    height: 79%;
+  }
+  .banner__bottom {
+    height: 6%;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .wrapper {
+    display: none;
+  }
+
+  .Layout_column__3MM83 {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

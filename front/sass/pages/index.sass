@@ -1,0 +1,575 @@
+$green-hover: #71F4C8
+$green: #2BEEAD
+$white-bg: #FFF
+$gray-bg: #F3F3F3
+$gray: #9C9CAB
+$black-bg: #09090C
+$gray-dark: #1A1A23
+$gray-arrow: #2C2C3A
+$orange: #FF6E00
+
+$font-supermolot-regular: 'SupermolotNeue-Regular', sans-serif
+$font-supermolot-bold: 'SupermolotNeue-Bold', sans-serif
+$font-supermolot-condensed-medium: 'SupermolotNeue-CondensedMedium', sans-serif
+$font-supermolot-condensed-bold-italic: 'SupermolotNeue-CondensedBoldItalic', sans-serif
+$font-supermolot-extended-extrabold-italic: 'SupermolotNeue-ExtendedExtraBoldItalic', sans-serif
+
+body
+  overscroll-behavior: none
+  -webkit-tap-highlight-color: transparent
+  background: $black-bg
+  img
+    max-width: 100%
+    height: auto
+.btn
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: center
+  min-width: 119px
+  max-width: max-content
+  padding: 0 10px
+  height: 36px
+  background-color: $green
+  font-size: 14px
+  font-family: $font-supermolot-bold
+  text-transform: uppercase
+  transition: all 0.3s ease
+  color: $black-bg
+  cursor: pointer
+  &:hover
+    background-color: $green-hover
+
+.bonusCas
+  position: relative
+  width: 100%
+  max-width: 1366px
+  margin: 0 auto
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: flex-start
+  overflow-x: hidden
+  background-color: $black-bg
+  &__info
+    padding: 16px 0
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+    gap: 20px
+    background: url('../img/bg-desc.jpg') no-repeat 50% -3px/contain
+    @media screen and (max-width: 1050px)
+      background: url('../img/bg-tab.jpg') no-repeat 50% 100%/cover
+    @media screen and (max-width: 900px)
+      background: url('../img/bg-tab.jpg') no-repeat 50% -2px/contain
+    @media screen and (max-width: 600px)
+      background: url('../img/bg-mob.jpg') no-repeat 50% 99%/cover
+
+    &-choise
+      display: flex
+      justify-content: center
+      position: relative
+    &-left, &-right
+      width: 160px
+      height: 160px
+      transition: all 0.3s ease
+      user-select: none
+    &-left
+      background: url('../img/casino-def.png') no-repeat 50% 50%/contain
+      &:hover
+        background: url('../img/casino-hover.png') no-repeat 50% 50%/contain
+    &-right
+      margin-left: -17px
+      position: relative
+      pointer-events: none
+      background: url('../img/sport-active.png') no-repeat 50% 50%/contain
+    &-link
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      cursor: pointer
+
+    &-top
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 14px
+
+    &-title
+      text-align: center
+      color: $gray-bg
+      font-family: $font-supermolot-extended-extrabold-italic
+      font-size: 56px
+      line-height: 100%
+      text-transform: uppercase
+      opacity: 0
+      will-change: transform, opacity
+      animation: bonusCasInfoTitleIn .7s ease-out .05s forwards
+
+    &-offer
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 60px
+      white-space: nowrap
+      opacity: 0
+      will-change: transform, opacity
+      animation: bonusCasInfoOfferIn .7s ease-out .18s forwards
+
+    &-offerTop
+      width: max-content
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 60px
+      background: url('../img/bg-orange.png') no-repeat 50% 50%/contain
+      background-size: 100% 100%
+      padding: 0 25px
+      gap: 10px
+      .bonus-value
+        text-transform: uppercase
+        font-size: 36px
+        line-height: 100%
+        color: $white-bg
+        font-family: $font-supermolot-condensed-bold-italic
+      span
+        color: $white-bg
+        font-size: 36px
+        line-height: 100%
+        font-family: $font-supermolot-condensed-bold-italic
+
+    &-offerBottom
+      position: relative
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-left: -13px
+      height: 100%
+      span
+        z-index: 2
+        font-family: $font-supermolot-condensed-bold-italic
+        color: $white-bg
+        font-size: 30px
+        line-height: 100%
+        background: url('../img/plus-bg.png') no-repeat 50% 50%/contain
+        background-size: 100% 100%
+        padding: 0 10px
+
+    &-offerFs
+      white-space: nowrap
+      margin-left: -18px
+      display: flex
+      justify-content: center
+      align-items: center
+      background: url('../img/bg-black.png') no-repeat 50% 50%/contain
+      background-size: 100% 100%
+      padding: 0 25px
+      height: 100%
+      font-size: 36px
+      line-height: 100%
+      color: $white-bg
+      font-family: $font-supermolot-condensed-bold-italic
+
+    &-btn
+      height: 50px
+      min-width: 211px
+      font-size: 18px
+      margin: 25px 0 55px
+
+    &-choice
+      position: relative
+      font-size: 24px
+      font-family: $font-supermolot-condensed-bold-italic
+      line-height: 100%
+      color: $white-bg
+      text-transform: uppercase
+      width: max-content
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 52px
+      padding: 0 25px
+      &:before, &:after
+        content: ""
+        position: absolute
+        top: 0
+        width: 11px
+        height: 100%
+        background: url('../img/orange-decor.png') no-repeat 50% 50%/contain
+        animation: bonusCasInfoChoiceBlink 1.2s ease-in-out 0s infinite
+      &:before
+        left: 5px
+      &:after
+        right: 4px
+
+  .bonus-card
+    width: 254px
+    height: 320px
+    min-width: 254px
+    display: flex
+    flex-direction: column
+    background: url('../img/cards/card.png') no-repeat 50% 50%/cover
+    margin-bottom: 18px
+    transition: all 0.3s ease
+    &:hover
+      cursor: pointer
+      transform: scale(1.05)
+      transform-origin: center
+      .bonus-card__thumb:not(.bottom)
+        transform: scale(1.1)
+        transform-origin: bottom center
+        &::before
+          opacity: 1
+        &::after
+          opacity: 1
+      .bonus-card__thumb.bottom
+        .act
+          opacity: 1
+    &__content
+      padding: 32px 0 28px
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 20px
+    &__top
+      width: 100%
+      height: auto
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: flex-end
+      gap: 8px
+      margin-top: -69px
+      margin-top: -69px
+    &__thumb
+      width: 150px
+      height: 150px
+      transition: all 0.3s ease
+      position: relative
+      overflow: hidden
+      &:not(.bottom)
+        picture
+          position: absolute
+          inset: 0
+          width: 100%
+          height: 100%
+          z-index: 1
+        img
+          display: block
+          width: 100%
+          height: 100%
+          object-fit: contain
+      &:not(.bottom)::before
+        content: ''
+        position: absolute
+        inset: 0
+        z-index: 2
+        pointer-events: none
+        opacity: .9
+        background-repeat: no-repeat, no-repeat
+        background-position: 160% 50%, center
+        background-size: 220% 220%, contain
+        background-blend-mode: screen
+        will-change: opacity, background-position
+        animation: bonusCardThumbGoldShine 1.8s linear 0s infinite
+        -webkit-mask-repeat: no-repeat
+        mask-repeat: no-repeat
+        -webkit-mask-position: center
+        mask-position: center
+        -webkit-mask-size: contain
+        mask-size: contain
+        mask-image: url('../img/cards/ticket1.png')
+      &--ticket1:not(.bottom)::before
+        background-image: linear-gradient(95deg, rgba(255, 214, 102, 0) 38%, rgba(255, 245, 196, .98) 50%, rgba(255, 214, 102, 0) 62%), url('../img/cards/ticket1.png')
+        -webkit-mask-image: url('../img/cards/ticket1.png')
+      &--ticket2:not(.bottom)::before
+        background-image: linear-gradient(95deg, rgba(255, 214, 102, 0) 38%, rgba(255, 245, 196, .98) 50%, rgba(255, 214, 102, 0) 62%), url('../img/cards/ticket2.png')
+        -webkit-mask-image: url('../img/cards/ticket2.png')
+      &--ticket3:not(.bottom)::before
+        background-image: linear-gradient(95deg, rgba(255, 214, 102, 0) 38%, rgba(255, 245, 196, .98) 50%, rgba(255, 214, 102, 0) 62%), url('../img/cards/ticket3.png')
+        -webkit-mask-image: url('../img/cards/ticket3.png')
+      &--ticket4:not(.bottom)::before
+        background-image: linear-gradient(95deg, rgba(255, 214, 102, 0) 38%, rgba(255, 245, 196, .98) 50%, rgba(255, 214, 102, 0) 62%), url('../img/cards/ticket4.png')
+        -webkit-mask-image: url('../img/cards/ticket4.png')
+      &--ticket5:not(.bottom)::before
+        background-image: linear-gradient(95deg, rgba(255, 214, 102, 0) 38%, rgba(255, 245, 196, .98) 50%, rgba(255, 214, 102, 0) 62%), url('../img/cards/ticket5.png')
+        -webkit-mask-image: url('../img/cards/ticket5.png')
+      &::after
+        content: ''
+        position: absolute
+        inset: 0
+        z-index: 3
+        background: url('../img/cards/ticket-hover.png') no-repeat 50% 50%/contain
+        opacity: 0
+        transition: opacity 0.3s ease
+        pointer-events: none
+      &.bottom
+        width: 150px
+        height: 150px
+        position: relative
+        picture
+          position: absolute
+          top: 0
+          left: 0
+          transition: all 0.3s ease
+        .act
+          opacity: 0
+
+        //background: url('../img/cards/slot.png') no-repeat 50% 50%/contain
+    &__label
+      text-align: center
+      font-family: $font-supermolot-regular
+      font-size: 12px
+      line-height: 100%
+      color: $gray
+      //&:empty
+      //  display: none
+    &__body
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 4px
+    &__deposit
+      width: 90%
+      display: flex
+      align-items: center
+      justify-content: center
+      gap: 6px
+      font-family: $font-supermolot-bold
+      font-size: 16px
+      line-height: 100%
+      color: $gray
+      position: relative
+      white-space: nowrap
+      &::before,
+      &::after
+        content: ''
+        height: 2px
+        flex: 1 1 auto
+        display: block
+      &::before
+        background: linear-gradient(90deg, rgba(156, 156, 171, 0) 0%, rgba(156, 156, 171, 0.6) 100%)
+      &::after
+        background: linear-gradient(90deg, rgba(156, 156, 171, 0.6) 0%, rgba(156, 156, 171, 0) 100%)
+    &__title
+      text-align: center
+      color: $gray-bg
+      font-size: 16px
+      line-height: 100%
+      font-family: $font-supermolot-bold
+      margin-top: 8px
+      span
+        color: $orange
+    &__value
+      text-align: center
+      color: $gray-bg
+      font-family: $font-supermolot-bold
+    &__note
+      font-family: $font-supermolot-regular
+      font-size: 16px
+      line-height: 120%
+      color: $gray-bg
+      text-align: center
+    &__btn
+      margin-top: 10px
+  &__bonusSlider
+    z-index: 1
+    margin-top: 44px
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    width: 100%
+    max-width: 1366px
+    &-container
+      width: 100%
+      position: relative
+      cursor: default
+      overflow: visible
+    &-fade
+      position: absolute
+      top: 0
+      width: 42px
+      height: 100%
+      z-index: 5
+      pointer-events: none
+      opacity: 0
+      transition: opacity 0.3s ease-in-out
+      display: none
+      &--left
+        left: -2px
+        background: linear-gradient(90deg, #09090C 0%, rgba(9, 9, 12, 0) 100%)
+        &.visible
+          opacity: 1
+      &--right
+        right: 0
+        background: linear-gradient(90deg, rgba(9, 9, 12, 0) 0%, #09090C 100%)
+        &.visible
+          opacity: 1
+    &-nav
+      position: absolute
+      top: 43%
+      transform: translateY(-50%)
+      width: 40px
+      height: 40px
+      background: $gray-arrow
+      box-shadow: 0 1px 15px 0 rgba(0, 0, 85, 0.10)
+      display: none
+      align-items: center
+      justify-content: center
+      cursor: pointer
+      z-index: 10
+      transition: all 0.3s ease
+      user-select: none
+      &:hover
+        transform: translateY(-50%) scale(1.3)
+      &:active
+        transform: translateY(-50%) scale(1.3)
+      img
+        width: 9px
+        height: 19px
+      &--prev
+        left: 9px
+      &--next
+        right: 9px
+
+  &__cardsRow
+    display: flex
+    flex-direction: row
+    align-items: stretch
+    justify-content: center
+    flex-wrap: wrap
+    gap: 23px
+  //
+  //@media screen and (max-width: 1366px)
+  //  &__bonusSlider
+  //    width: 90%
+  //    max-width: 100%
+  //    padding: 0 60px
+  //    &-container
+  //      cursor: grab
+  //      user-select: none
+  //      overflow: hidden
+  //      &:active
+  //        cursor: grabbing
+  //    &-fade
+  //      display: block
+  //    &-nav
+  //      display: flex
+  //  &__cardsRow
+  //    justify-content: flex-start
+  //    flex-wrap: nowrap
+  //    transition: transform 0.3s ease
+  //    will-change: transform
+  //    padding-bottom: 8px
+
+
+
+  &__bottom
+    width: 100%
+    margin-top: 40px
+  .drop
+      padding: 12px 0
+  .dropdown
+    margin: 23px auto 0 auto
+    outline: none !important
+    cursor: pointer
+    position: relative
+    width: 100%
+    max-width: 750px
+    text-align: start
+    summary::-webkit-details-marker
+      display: none
+    > summary
+      list-style: none
+    summary
+      width: 100%
+      font-family: $font-supermolot-condensed-medium
+      font-size: 14px
+      font-weight: 700
+      color: #D3D9EA
+      padding: 12px 0px 12px 0px
+      outline: none!important
+      position: relative
+      display: flex
+      align-items: center
+      user-select: none
+      border-bottom: 1px solid $gray-dark
+      z-index: 1
+      ::-webkit-details-marker
+        display: none
+      &:after
+        content: ''
+        background: url('../img/arrow-down.svg') no-repeat 50% 50%/cover
+        width: 12px
+        height: 12px
+        position: absolute
+        right: 0px
+        display: block
+    &[open]
+      summary
+        &:after
+          transform: rotate(180deg)
+    .drop-txt
+      width: 100%
+      margin-top: 20px
+      overflow-wrap: break-word
+      text-align: start
+      cursor: auto
+      background-size: 100% 100%
+      &-list
+        padding: 0px 4px 0px 0px
+        max-height: 450px
+        overflow-y: auto
+        &::-webkit-scrollbar
+          width: 4px
+          background: $gray-bg
+        &::-webkit-scrollbar-thumb
+          background: $green
+          width: 4px
+        p, h2, h3, h4, h5, h6, strong, div, span, ul>li, ol>li
+          margin-bottom: 10px
+          font-size: 14px
+          line-height: 19px
+          font-family: $font-supermolot-condensed-medium
+          color: #D3D9EA
+        ul > li
+          padding-left: 20px
+          position: relative
+          &::before
+            position: absolute
+            content: ''
+            width: 4px
+            height: 4px
+            background:  #D3D9EA
+            border-radius: 50%
+            display: inline-block
+            left: 7px
+            top: 8px
+        a
+          color: #D3D9EA
+          font-family: $font-supermolot-condensed-medium
+          text-decoration: underline
+          position: relative
+          &:hover
+            text-decoration: none
+        .retreat1
+          padding-left: 20px
+        .retreat2
+          padding-left: 30px
+        .circle
+          padding-left: 20px
+          &:before
+            content: ''
+            width: 4px
+            height: 4px
+            background: $gray-bg
+            border-radius: 50%
+            display: inline-block
+            margin: 0 5px 3px 0
